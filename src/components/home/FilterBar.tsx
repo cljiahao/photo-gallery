@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useImages } from "@/lib/google-photos";
 
 export default function FilterBar() {
-  const { data: links, isLoading, isError } = useImages();
+  const { data: links, isLoading } = useImages();
 
   const searchParams = useSearchParams();
   const router = useRouter();

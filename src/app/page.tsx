@@ -2,7 +2,6 @@ import BackgroundImage from "@/components/home/BackgroundImage";
 import FilterBar from "@/components/home/FilterBar";
 import HeadLine from "@/components/home/HeadLine";
 import ImageList from "@/components/home/ImageList";
-import { useImages } from "@/lib/google-photos";
 
 export default async function HomePage() {
   return (

@@ -9,7 +9,7 @@ export default function BackgroundImage() {
   const [backgroundUrl, setBackgroundUrl] = useState<string | null>(null);
   const [isFading, setIsFading] = useState(false);
 
-  const { data: links, isLoading, isError } = useImages();
+  const { data: links, isLoading } = useImages();
 
   useEffect(() => {
     if (!links || links.length === 0) return;
@@ -32,7 +32,7 @@ export default function BackgroundImage() {
     return () => clearInterval(intervalId); // Cleanup on unmount
   }, [links]);
 
-  if (!backgroundUrl) return null;
+  if (!backgroundUrl || isLoading) return null;
 
   return (
     <div className="hw-full absolute -z-1 bg-slate-300">
