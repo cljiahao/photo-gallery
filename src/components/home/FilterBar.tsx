@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 import { Button } from "@/components/ui/button";
 import { useImages } from "@/lib/google-photos";
@@ -36,12 +37,14 @@ export default function FilterBar() {
   if (isLoading) return null;
 
   return (
-    <div className="flex-center h-18 gap-12 text-lg">
-      {uniqueTypes.map((type) => (
-        <Button key={type} onClick={() => handleClick(type)}>
-          {type}
-        </Button>
-      ))}
-    </div>
+    <Suspense>
+      <div className="flex-center h-18 gap-12 text-lg">
+        {uniqueTypes.map((type) => (
+          <Button key={type} onClick={() => handleClick(type)}>
+            {type}
+          </Button>
+        ))}
+      </div>
+    </Suspense>
   );
 }
