@@ -1,3 +1,4 @@
+import { ImageListProps } from "@/lib/interfaces";
 import { shuffleArray } from "@/lib/utils";
 
 const album_links: { [id: string]: string } = {

@@ -13,7 +13,6 @@ export default function BackgroundImage() {
 
   useEffect(() => {
     if (!links || links.length === 0) return;
-    console.log(backgroundUrl);
 
     const pickRandom = () => {
       setIsFading(true); // Start fade-out

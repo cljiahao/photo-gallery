@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { ImageListProps } from "./interfaces";
 
 const fetchData = async () => {
   const res = await fetch("/api/proxy");
