@@ -36,9 +36,13 @@ export default function FilterBar() {
   if (isLoading) return null;
 
   return (
-    <div className="flex-center h-18 gap-12 text-lg">
+    <div className="flex-center h-18 gap-2 md:h-24 md:flex-row md:gap-12 md:pt-4">
       {uniqueTypes.map((type) => (
-        <Button key={type} onClick={() => handleClick(type)}>
+        <Button
+          className="p-2 text-xs md:text-lg"
+          key={type}
+          onClick={() => handleClick(type)}
+        >
           {type}
         </Button>
       ))}

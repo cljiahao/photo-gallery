@@ -26,7 +26,7 @@ export default function BackgroundImage() {
     };
 
     pickRandom(); // Pick one initially
-    const intervalId = setInterval(pickRandom, 5000);
+    const intervalId = setInterval(pickRandom, 20000);
 
     return () => clearInterval(intervalId); // Cleanup on unmount
   }, [links]);

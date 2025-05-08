@@ -23,7 +23,7 @@ export default function ImageList() {
       {isLoading ? (
         <ImageCardSkeleton />
       ) : (
-        <div className="grid grid-cols-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5">
           {filteredLinks?.map((link) => (
             <ImageCard key={link.id + link.type} url={link.url} />
           ))}
