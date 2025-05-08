@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useImages } from "@/lib/google-photos";
 
@@ -34,16 +34,14 @@ export default function BackgroundImage() {
   if (!backgroundUrl || isLoading) return null;
 
   return (
-    <Suspense>
-      <div className="hw-full absolute -z-1 bg-slate-300">
-        <Image
-          className={`-z-1 object-cover transition-opacity duration-500 ${isFading ? "opacity-0" : "opacity-100"}`}
-          src={backgroundUrl}
-          alt={backgroundUrl}
-          fill
-          priority
-        />
-      </div>
-    </Suspense>
+    <div className="hw-full absolute -z-1 bg-slate-300">
+      <Image
+        className={`-z-1 object-cover transition-opacity duration-500 ${isFading ? "opacity-0" : "opacity-100"}`}
+        src={backgroundUrl}
+        alt={backgroundUrl}
+        fill
+        priority
+      />
+    </div>
   );
 }

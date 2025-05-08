@@ -1,7 +1,6 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
 
 import { useImages } from "@/lib/google-photos";
 import ImageCard from "./ImageCard";
@@ -20,18 +19,16 @@ export default function ImageList() {
     : links;
 
   return (
-    <Suspense>
-      <div className="no-scrollbar hw-full overflow-y-auto">
-        {isLoading ? (
-          <ImageCardSkeleton />
-        ) : (
-          <div className="grid grid-cols-5">
-            {filteredLinks?.map((link) => (
-              <ImageCard key={link.id + link.type} url={link.url} />
-            ))}
-          </div>
-        )}
-      </div>
-    </Suspense>
+    <div className="no-scrollbar hw-full overflow-y-auto">
+      {isLoading ? (
+        <ImageCardSkeleton />
+      ) : (
+        <div className="grid grid-cols-5">
+          {filteredLinks?.map((link) => (
+            <ImageCard key={link.id + link.type} url={link.url} />
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
