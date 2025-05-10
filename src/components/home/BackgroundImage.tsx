@@ -34,7 +34,7 @@ export default function BackgroundImage() {
   if (!backgroundUrl || isLoading) return null;
 
   return (
-    <div className="hw-full absolute -z-1 bg-slate-300">
+    <div className="hw-full absolute -z-1 bg-black">
       <Image
         className={`-z-1 object-cover transition-opacity duration-500 ${isFading ? "opacity-0" : "opacity-100"}`}
         src={backgroundUrl}

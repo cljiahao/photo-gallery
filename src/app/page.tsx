@@ -12,7 +12,7 @@ export default async function HomePage() {
         <Suspense>
           <BackgroundImage />
         </Suspense>
-        <div className="flex-center flex-col rounded-xl bg-slate-50 p-12 opacity-85">
+        <div className="flex-center flex-col rounded-xl bg-white p-12 opacity-85">
           <HeadLine />
           <Suspense>
             <FilterBar />
@@ -21,7 +21,7 @@ export default async function HomePage() {
       </header>
       <main
         id="main"
-        className="flex-center hw-full snap-start flex-col bg-slate-300"
+        className="flex-center hw-full snap-start flex-col bg-black"
       >
         <Suspense>
           <FilterBar />
