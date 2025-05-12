@@ -36,10 +36,10 @@ export default function FilterBar() {
   if (isLoading) return null;
 
   return (
-    <div className="flex-center h-18 gap-2 md:h-24 md:flex-row md:gap-12 md:pt-4">
+    <div className="flex-center h-18 gap-2 md:h-24 md:flex-row md:gap-10 md:pt-4">
       {uniqueTypes.map((type) => (
         <Button
-          className="p-2 text-xs md:text-lg"
+          className="border-2 border-slate-300 bg-slate-50 p-2 text-xs hover:border-sky-200 hover:bg-sky-100 hover:underline md:p-4 md:text-lg"
           key={type}
           onClick={() => handleClick(type)}
         >
